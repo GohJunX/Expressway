@@ -3,29 +3,24 @@ display: flex;
 align-items: center;
 margin-top: 10px;
 margin-bottom: 10px;
+background-color: white;
 }
 
 .images{
 height:30px;
 }
 
-#r{
-    
+#r{  
     color: darkgoldenrod;
 }
 
-// .container2{
-// display: flex;
-// align-items: center;
-// }
-
 td#wr{
 font-weight: bold;
-    
+padding-left: 50px; 
+padding-top: 20px;  
 }
 
 td{
- 
     text-align: left;
 }
 
@@ -33,3 +28,13 @@ td{
     height:30px;
     position: absolute ;
     }
+
+    ion-content{
+        --ion-background-color:lightgrey;
+    }
+
+    #second{
+        background-color:white;
+
+    }
+    

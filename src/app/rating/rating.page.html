@@ -11,12 +11,17 @@
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item routerLink="/rating2" *ngFor="let dataItem of DepartmentList">
+    <ion-item *ngFor="let dataItem of DepartmentList" [routerLink]="[dataItem.highwayid]" color="light">
       <!-- <ion-thumbnail slot="start">
         <img src="../assets/icon/e32-gray.png">
       </ion-thumbnail> -->
-      <ion-thumbnail><img ng-src="{{dataItem.highwayPhoto}}" ng-click="showImages($index)" class="image-list-thumb"/></ion-thumbnail>
-      <ion-label>{{dataItem.highwayid}}</ion-label>
+      <!-- <ion-thumbnail>
+      </ion-thumbnail>   -->
+     
+      <ion-avatar slot="start">
+        <img [src]="picUrl1 + dataItem.highwayImageName">
+      </ion-avatar>
+      
         <ion-label>{{dataItem.highwayName}}</ion-label>
       
         <!-- <img class="imges" src="../assets/image/download.png"> -->

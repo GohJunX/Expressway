@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { Rating2PageRoutingModule } from './rating2-routing.module';
 
 import { Rating2Page } from './rating2.page';
+import { NgbRatingModule} from '@ng-bootstrap/ng-bootstrap'; 
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Rating2PageRoutingModule
+    Rating2PageRoutingModule,
+    NgbRatingModule,
   ],
   declarations: [Rating2Page]
 })

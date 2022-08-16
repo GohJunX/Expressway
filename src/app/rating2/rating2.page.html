@@ -9,43 +9,59 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-<div class="container">
-  <ion-thumbnail slot="start">
-    <img src="../assets/icon/e32-gray.png">
-  </ion-thumbnail>&nbsp; &nbsp;&nbsp;
-  <label>L/raya Baru Lembah Klang(NKVE)</label>
+<ion-content *ngFor="let dataItem of information">
+<div class="container" background-color="white">
+  <ion-avatar slot="start">
+    <img [src]="picUrl1 + dataItem.highwayImageName">
+  </ion-avatar>&nbsp; &nbsp;&nbsp;
+  <label>{{dataItem.highwayName}}</label>
+ 
+</div>
+
+<div>
+<div id="second" >
+<table>
+<tr>&nbsp;&nbsp;
+<div *ngFor="let avg of avgRate">
+<td> <ngb-rating [max]="5" [(rate)]="avg.val_1" [readonly]="true" style="color:#b2b22b; shape-image-threshold:; "></ngb-rating> </td>
+<td style="color:rgb(104, 105, 40)"> AR: {{avg.val_1}}</td>
+</div>
+<!-- <img class="images" src="../assets/image/download.png"> -->
+<td></td>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<td id="wr" slot="end"> <label [routerLink]="[dataItem.highwayId]">write</label></td>
+</tr>
+</table>
+</div>
+
+<br>
+
+<ion-list *ngFor="let dataItem1 of informationReview">
+  <ion-item color="light">     
+    <!-- <label>{{dataItem1.reviewDate}}</label> -->
+    <ion-label><span style="font-weight:bold; padding-right: 20px; font-size: large;">{{dataItem1.reviewName}}</span><span style="font-size: small;">{{dataItem1.reviewDate | date:'yyyy-MM-dd'}}</span>
+      <div style="font-size: x-small;"></div>
+    <p style="font-size: large;">{{dataItem1.reviewComment}} </p>
+    <!-- <span>{{dataItem1.reviewImageName}}</span> -->
+    
+  </ion-label>
+    <ngb-rating [max]="5" [(rate)]="dataItem1.reviewRating" [readonly]="true" style="color:#b2b22b"></ngb-rating>
+    <!-- <ion-badge  slot="end"><img  class="images" src="../assets/image/download.png"></ion-badge> -->
+
+  </ion-item>
+  
+  <!-- <ion-item color="light">    
+    <table>
+    <tr><td>Julie</td></tr>      
+    <ion-avatar slot="start"> 
+    <img  class="images" src="../assets/image/download.png"></td><td>1 month ago</td></tr>
+  </ion-avatar>
+    <tr><td>i use hightway daily</td></tr>   
+    </table>
+  </ion-item> -->
+</ion-list>
 </div>
 
 
-<table>
-<tr>&nbsp;&nbsp;
-<td><label id="r">5</label></td>
-<td> <img class="images" src="../assets/image/download.png"></td>
-<td>2review</td>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<td id="wr" routerLink="/rating3">write</td>
-</tr>
-</table>
-<br>
-<br>
-
-<ion-list>
-  <ion-item >    
-    <table>
-    <tr><td>Julie</td></tr>      
-    <tr><td><img  class="images" src="../assets/image/download.png"></td><td>1 month ago</td></tr>
-    <tr><td>i use hightway daily</td></tr>   
-    </table>
-  </ion-item>
-  <br>
-  <ion-item >    
-    <table>
-    <tr><td>Julie</td></tr>      
-    <tr><td><img  class="images" src="../assets/image/download.png"></td><td>1 month ago</td></tr>
-    <tr><td>i use hightway daily</td></tr>   
-    </table>
-  </ion-item>
-</ion-list>
 <!-- <div id="write">
 <div class="container2">
 <label id="r">5</label>
