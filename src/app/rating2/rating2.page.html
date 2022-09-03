@@ -42,7 +42,8 @@
       <div style="font-size: x-small;"></div>
     <p style="font-size: large;">{{dataItem1.reviewComment}} </p>
     <!-- <span>{{dataItem1.reviewImageName}}</span> -->
-    
+   <ion-img [src]="PhotoFilePath + dataItem1.reviewImageName" height="250px;" width="200px;" alt="No Photo" style="font-style:italic"></ion-img>
+   
   </ion-label>
     <ngb-rating [max]="5" [(rate)]="dataItem1.reviewRating" [readonly]="true" style="color:#b2b22b"></ngb-rating>
     <!-- <ion-badge  slot="end"><img  class="images" src="../assets/image/download.png"></ion-badge> -->

@@ -28,5 +28,48 @@
 
 
 ion-content{
-  --ion-background-color:lightgrey;
+  --ion-background-color: linear-gradient(to right, blue, lightblue );
 }
+
+#text{
+  color:black; 
+  margin-top: 20px;
+  font-size: x-large;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+
+
+}
+
+.your-img {
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+#container{
+background:white ;
+width:100%;
+border-top-right-radius:75px;
+border-top-left-radius:75px;
+margin-top: 140px;
+padding-bottom: 250px;
+}
+
+.btn1{
+height:50px;
+width:350px;
+
+font-weight: bold;
+font-size: larger;
+}
+
+
+.btn2{
+  height:50px;
+  width:350px;
+
+  font-weight: bold;
+  font-size: larger;
+  }
+  

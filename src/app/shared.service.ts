@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 export class SharedService {
 
 readonly APIUrl ="https://localhost:5001/api";
-readonly PhotoUrl ="https://localhost:5001/Photos";
+readonly PhotoUrl ="https://localhost:5001/Photos/";
 
   constructor(private http:HttpClient) { }
 
@@ -50,6 +50,8 @@ return this.http.get(this.APIUrl+'/averageRating/'+ id);
 uploadPhoto(val:any){
 return this.http.post(this.APIUrl+'/review/SaveFile', val);     
     }
+
+
 
 }
 
