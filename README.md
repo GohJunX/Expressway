@@ -1,4 +1,4 @@
 # expressway
-WebApllication1 open in visual studio
+WebApllication1.sln open in visual studio
 
 Expressway.bacpac open and import in microsoft SQL
